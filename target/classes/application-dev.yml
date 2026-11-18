@@ -1,0 +1,18 @@
+ollama:
+  base-url: https://sender-commitment-offline-designers.trycloudflare.com
+  model: minicpm-v:latest
+
+v4:
+  api:
+    base-url: http://localhost:9191
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/auraDOCS
+
+keycloak:
+  auth-server-url: http://localhost:8080/
+  realm: auraDOCS

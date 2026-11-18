@@ -1,0 +1,18 @@
+ollama:
+  base-url: http://acme-ai.auradocs.com:11434
+  model: minicpm-v4.6
+
+v4:
+  api:
+    base-url: ${V4_API_BASE_URL:http://localhost:9191}
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEYCLOAK_ISSUER_URI:https://v4.auradocs.com/auth/realms/auraDOCS}
+
+keycloak:
+  auth-server-url: ${KEYCLOAK_AUTH_URL:https://v4.auradocs.com/auth/}
+  realm: ${KEYCLOAK_REALM:auraDOCS}
